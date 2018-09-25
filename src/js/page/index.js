@@ -15,7 +15,8 @@ require("../../js/components/header.js");
 require("../../js/components/cookie.js");
 require("jquery-countdown");
 require("../../../node_modules/swiper/dist/js/swiper.min.js");
-var Swiper = require("swiper");
+
+import Swiper from 'swiper';
 
 var queryString = require("query-string");
 // import queryString from 'query-string'
