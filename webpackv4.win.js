@@ -189,8 +189,9 @@ var config = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
+    host:"172.16.0.118",
     port: 9090,
-    open: true
+    open: false
   }
 };
 
