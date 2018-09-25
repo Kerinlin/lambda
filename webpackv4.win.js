@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 var HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const debug = process.env.NODE_ENV !== "production";
+const debug = process.env.ENV !== "production";
 
 var entries = getEntry("src/js/page/**/**.js", "src/js/page/");
 var chunks = Object.keys(entries);
