@@ -119,6 +119,29 @@ section.banner-contents {
     .contact {
       width: 100%;
       min-height: 128px;
+      a{
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+      }
+      .telegram{
+        background: url('../../img/index/css_sprites.png') -2px -32px;
+      }
+      .twitter{
+        background: url('../../img/index/css_sprites.png') -32px -32px;
+      }
+      .wechat{
+        background: url('../../img/index/css_sprites.png') -62px -2px;
+      }
+      .facebook{
+        background: url('../../img/index/css_sprites.png') -2px -2px;
+      }
+      .linkedin{
+        background: url('../../img/index/css_sprites.png') -32px -2px;
+      }
+      .weibo{
+        background: url('../../img/index/css_sprites.png') -62px -32px;
+      }
     }
     .new {
       .row1{
@@ -269,6 +292,7 @@ section.scene {
     margin-top: 60px;
   }
   img {
+    width: 83px;
     height: 90px;
   }
   .car {
@@ -1016,6 +1040,14 @@ section.partners {
           font-size: 32px;
         }
       }
+    }
+  }
+}
+@media(min-width:320px){
+  section.team{
+    .avatar{
+      width: 118px;
+      height: 118px;
     }
   }
 }

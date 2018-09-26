@@ -3,30 +3,45 @@
 
 	<section class="banner-contents  firstbgimg">
 		<div class="container">
-			<h4 style="text-align: center;font-size: 28px;margin-bottom: 30px;"><%=lang.section1.slide3.title2%></h4>
+			<h4 style="text-align: center;font-size: 28px;margin-bottom: 30px;">
+				<%=lang.section1.slide3.title2%>
+			</h4>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide container new">
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="col-lg-8 col-md-8 col-sm-7 col-xs-10 row1">
-								<h2><%=lang.section1.slide3.title1%></h2>
-								<span><%=lang.section1.slide3.introduce1%> <a style="color:#3cdcd1" target="_blank" href="https://t.me/HelloLambda">https://t.me/HelloLambda</a><%=lang.section1.slide3.introduce2%><span>									
-								<video class="video in" style="display:none" src="https://www.lambda.im/assets/video/1537251347221346.mp4" controls="controls" poster="<%= require('../../img/index/fm1.jpg') %>" autoplay="autoplay"></video>
-								<iframe class="video out" style="display:none" src="https://www.youtube.com/embed/O6olM_dry08" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<h2>
+									<%=lang.section1.slide3.title1%>
+								</h2>
+								<span>
+									<%=lang.section1.slide3.introduce1%> <a style="color:#3cdcd1" target="_blank" href="https://t.me/HelloLambda">https://t.me/HelloLambda</a>
+									<%=lang.section1.slide3.introduce2%><span>
+										<video class="video in" style="display:none" src="https://www.lambda.im/assets/video/1537251347221346.mp4"
+										 controls="controls" poster="<%= require('../../img/index/fm1.jpg') %>" autoplay="autoplay"></video>
+										<iframe class="video out" style="display:none" src="https://www.youtube.com/embed/O6olM_dry08" frameborder="0"
+										 allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 
 							<div class="col-lg-4 col-md-4 col-sm-5 col-xs-8 row2">
 								<div id="time" class="countdown"></div>
 								<div class="introduce">
-									<h3><%=lang.section1.slide3.timeStart%></h3>
-									<h3><%=lang.section1.slide3.timeEnd%></h3>
+									<h3>
+										<%=lang.section1.slide3.timeStart%>
+									</h3>
+									<h3>
+										<%=lang.section1.slide3.timeEnd%>
+									</h3>
 								</div>
-								<a class="btn-tem1" href="https://token.lambda.im/#/register" id="contribute"><%=lang.section1.slide3.btnName%></a>
+								<a class="btn-tem1" href="https://token.lambda.im/#/register" id="contribute">
+									<%=lang.section1.slide3.btnName%></a>
 							</div>
 						</div>
 
 						<div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 bottom">
-							<h3 class="subtitle2"><%=lang.section1.slide3.title3%></h3>
+							<h3 class="subtitle2">
+								<%=lang.section1.slide3.title3%>
+							</h3>
 							<div class="part-wrapper col-lg-12 col-md-12 col-sm-12  col-xs-12">
 
 								<div class="part col-lg-2 col-md-2 col-xs-2 col-sm-2">
@@ -81,43 +96,34 @@
 							<p style="opacity:0.8;font-size:14px;text-align: left;">
 								<%=lang.section1.slide1.introduce%>
 							</p>
-							<a class="btn firstBtn" href="https://www.lambda.im/doc/Lambda-WhitePaper-en.pdf" target="_blank">
-								<%=lang.section1.slide1.btnName%></a>
+							<a class="btn firstBtn" href="https://www.lambda.im/doc/Lambda-WhitePaper-en.pdf" target="_blank"><%=lang.section1.slide1.btnName%></a>
 							<div class="contact">
 								<ul>
 									<li>
-										<a href="https://t.me/HelloLambda" target="_blank">
-											<img alt="telegram" src="<%= require('../../img/index/telegram.png') %>" />
+										<a class="telegram" href="https://t.me/HelloLambda" target="_blank">
 										</a>
 									</li>
 									<li>
-										<a href="https://twitter.com/Lambdaim" target="_blank">
-											<img alt="twitter" src="<%= require('../../img/index/twitter.png') %>" />
+										<a class="twitter" href="https://twitter.com/Lambdaim" target="_blank">
 										</a>
 									</li>
 									<li class="wechatitem">
-										<a href="https://mp.weixin.qq.com/s/rW3pOxzJwI1HXrTESTYxWA" target="_blank">
-											<img alt="wechat" src="<%= require('../../img/index/wechat.png') %>" />
+										<a class="wechat" href="https://mp.weixin.qq.com/s/rW3pOxzJwI1HXrTESTYxWA" target="_blank">
 										</a>
-										<img alt="weichhart lambda" style="width:100px" class="wechatQRcode" src="<%= require('../../img/index/wechartrq.jpg') %>" />
+										<img alt="weichhart lambda" style="width:100px" class="wechatQRcode" src="<%= require('../../img/index/wechartrq.png') %>" />
 									</li>
 									<li>
-										<a href="https://www.facebook.com/Lambdaim" target="_blank">
-											<img alt="facebook" src="<%= require('../../img/index/facebook.png') %>" />
+										<a class="facebook" href="https://www.facebook.com/Lambdaim" target="_blank">
 										</a>
 									</li>
 									<li>
-										<a href="https://www.linkedin.com/company/lambdaim" target="_blank">
-											<img alt="linkedin" src="<%= require('../../img/index/linkedin.png') %>" />
+										<a class="linkedin" href="https://www.linkedin.com/company/lambdaim" target="_blank">
 										</a>
 									</li>
 									<li>
-										<a href="https://www.weibo.com/lambdaim?is_all=1" target="_blank">
-											<img alt="weibo" src="<%= require('../../img/index/weibo.png') %>" />
+										<a class="weibo" href="https://www.weibo.com/lambdaim?is_all=1" target="_blank">
 										</a>
 									</li>
-
-
 								</ul>
 							</div>
 						</div>
@@ -173,41 +179,35 @@
 							<div class="col-md-12 col-sm-12">
 								<a class="btn firstBtn" href="https://www.lambda.im/doc/Lambda-Economic-White-Paper.pdf" target="_blank">
 									<%=lang.section1.slide2.btnName%></a>
-								<div class="contact">
-									<ul>
-										<li>
-											<a href="https://t.me/HelloLambda" target="_blank">
-												<img alt="telegram" src="<%= require('../../img/index/telegram.png') %>" />
-											</a>
-										</li>
-										<li>
-											<a href="https://twitter.com/Lambdaim" target="_blank">
-												<img alt="twitter" src="<%= require('../../img/index/twitter.png') %>" />
-											</a>
-										</li>
-										<li class="wechatitem">
-											<a href="https://mp.weixin.qq.com/s/rW3pOxzJwI1HXrTESTYxWA" target="_blank">
-												<img alt="wechat" src="<%= require('../../img/index/wechat.png') %>" />
-											</a>
-											<img alt="weichhart lambda" style="width:100px" class="wechatQRcode" src="<%= require('../../img/index/wechartrq.jpg') %>" />
-										</li>
-										<li>
-											<a href="https://www.facebook.com/Lambdaim" target="_blank">
-												<img alt="facebook" src="<%= require('../../img/index/facebook.png') %>" />
-											</a>
-										</li>
-										<li>
-											<a href="https://www.linkedin.com/company/lambdaim" target="_blank">
-												<img alt="linkedin" src="<%= require('../../img/index/linkedin.png') %>" />
-											</a>
-										</li>
-										<li>
-											<a href="https://www.weibo.com/lambdaim?is_all=1" target="_blank">
-												<img alt="weibo" src="<%= require('../../img/index/weibo.png') %>" />
-											</a>
-										</li>
-									</ul>
-								</div>
+									<div class="contact">
+										<ul>
+											<li>
+												<a class="telegram" href="https://t.me/HelloLambda" target="_blank">
+												</a>
+											</li>
+											<li>
+												<a class="twitter" href="https://twitter.com/Lambdaim" target="_blank">
+												</a>
+											</li>
+											<li class="wechatitem">
+												<a class="wechat" href="https://mp.weixin.qq.com/s/rW3pOxzJwI1HXrTESTYxWA" target="_blank">
+												</a>
+												<img alt="weichhart lambda" style="width:100px" class="wechatQRcode" src="<%= require('../../img/index/wechartrq.png') %>" />
+											</li>
+											<li>
+												<a class="facebook" href="https://www.facebook.com/Lambdaim" target="_blank">
+												</a>
+											</li>
+											<li>
+												<a class="linkedin" href="https://www.linkedin.com/company/lambdaim" target="_blank">
+												</a>
+											</li>
+											<li>
+												<a class="weibo" href="https://www.weibo.com/lambdaim?is_all=1" target="_blank">
+												</a>
+											</li>
+										</ul>
+									</div>
 							</div>
 						</div>
 					</div>
@@ -502,7 +502,7 @@
 			<!-- <span>ECOSYSTEM</span> -->
 			<div class="row">
 				<div class="col-xs-12">
-					<img alt="<%=lang.section7.title%>" src="<%= require('../../img/index/tokensale3.jpg') %>">
+					<img alt="<%=lang.section7.title%>" src="<%= require('../../img/index/tokensale2.png') %>">
 				</div>
 				<!-- <div class="col-md-offset-1 col-md-10 col-sm-12 col-xxs-12">
 					<p style="text-align:center;opacity:0.8">SSS.</p>
@@ -726,7 +726,7 @@
 					<div class="head">
 						<div class="head-wrapper">
 							<a target="_blank" class="userimga" href="https://www.linkedin.com/in/xiaoyang-he-0083b428/">
-								<img alt="He Xiaoyang" src="<%= require('../../img/index/hxy.png') %>">
+								<img class="avatar" alt="He Xiaoyang" src="<%= require('../../img/index/hxy.png') %>">
 								<img alt="linkedin" class="userlinkimg" src="<%= require('../../img/index/linkedin.png') %>">
 
 							</a>
@@ -743,7 +743,7 @@
 					<div class="head">
 						<div class="head-wrapper">
 							<a target="_blank" class="userimga" href="https://www.linkedin.com/in/monanli/">
-								<img alt="Li Monan" src="<%= require('../../img/index/lmn.png') %>">
+								<img alt="Li Monan" class="avatar" src="<%= require('../../img/index/lmn.png') %>">
 								<img alt="linkedin" class="userlinkimg" src="<%= require('../../img/index/linkedin.png') %>">
 							</a>
 						</div>
@@ -757,7 +757,7 @@
 					<div class="head">
 						<div class="head-wrapper">
 							<a target="_blank" class="userimga" href="https://www.linkedin.com/in/bingqing-he-119019b1/">
-								<img alt="He Bingqing" src="<%= require('../../img/index/hbq.png') %>">
+								<img alt="He Bingqing" class="avatar" src="<%= require('../../img/index/hbq.png') %>">
 								<img alt="linkedin" class="userlinkimg" src="<%= require('../../img/index/linkedin.png') %>">
 							</a>
 						</div>
@@ -772,7 +772,7 @@
 					<div class="head">
 						<div class="head-wrapper">
 							<a target="_blank" class="userimga" href="https://www.linkedin.com/in/hongqiangguo/">
-								<img alt="Guo Hongqiang" src="<%= require('../../img/index/ghq.png') %>">
+								<img alt="Guo Hongqiang" class="avatar" src="<%= require('../../img/index/ghq.png') %>">
 								<img alt="linkedin" class="userlinkimg" src="<%= require('../../img/index/linkedin.png') %>">
 							</a>
 						</div>
@@ -785,7 +785,7 @@
 					<div class="head">
 						<div class="head-wrapper">
 							<a target="_blank" class="userimga" href="https://www.linkedin.com/in/%E6%B5%B7%E5%BC%BA-%E9%AB%98-187a60166/">
-								<img src="<%= require('../../img/index/gaohq.png') %>" alt="Gao Haiqiang">
+								<img class="avatar" src="<%= require('../../img/index/gaohq.png') %>" alt="Gao Haiqiang">
 								<img alt="linkedin" class="userlinkimg" src="<%= require('../../img/index/linkedin.png') %>">
 							</a>
 						</div>
@@ -799,7 +799,7 @@
 					<div class="head">
 						<div class="head-wrapper">
 							<a target="_blank" class="userimga" href="https://www.linkedin.com/in/haijun-zhao-0a76652b/">
-								<img src="<%= require('../../img/index/zhj.png') %>" alt="Zhao Haijun">
+								<img class="avatar" src="<%= require('../../img/index/zhj.png') %>" alt="Zhao Haijun">
 								<img alt="linkedin" class="userlinkimg" src="<%= require('../../img/index/linkedin.png') %>">
 							</a>
 						</div>
@@ -816,7 +816,7 @@
 				<div class="col-md-3 col-xxs-4  ">
 					<div class="head">
 						<div class="head-wrapper">
-							<img src="<%= require('../../img/index/tj.png') %>" alt="Tian Jia">
+							<img class="avatar" src="<%= require('../../img/index/tj.png') %>" alt="Tian Jia">
 						</div>
 						<p class="name">Tian Jia</p>
 					</div>
@@ -824,7 +824,7 @@
 				<div class="col-md-3 col-xxs-4 ">
 					<div class="head">
 						<div class="head-wrapper">
-							<img src="<%= require('../../img/index/szy.png') %>" alt="Sun Zhongying">
+							<img class="avatar" src="<%= require('../../img/index/szy.png') %>" alt="Sun Zhongying">
 						</div>
 						<p class="name">Sun Zhongying</p>
 					</div>
@@ -832,7 +832,7 @@
 				<div class="col-md-3 col-xxs-4 ">
 					<div class="head">
 						<div class="head-wrapper">
-							<img src="<%= require('../../img/index/lch.png') %>" alt="Liu Chunhua">
+							<img class="avatar" src="<%= require('../../img/index/lch.png') %>" alt="Liu Chunhua">
 						</div>
 						<p class="name">Liu Chunhua</p>
 					</div>
@@ -841,7 +841,7 @@
 				<div class="col-md-3 col-xxs-4">
 					<div class="head">
 						<div class="head-wrapper">
-							<img src="<%= require('../../img/index/Lucien Chen.png') %>" alt="Lucien Chen">
+							<img class="avatar" src="<%= require('../../img/index/Lucien Chen.png') %>" alt="Lucien Chen">
 						</div>
 						<p class="name">Lucien Chen</p>
 					</div>
@@ -850,7 +850,7 @@
 				<div class="col-md-3 col-xxs-4">
 					<div class="head">
 						<div class="head-wrapper">
-							<img src="<%= require('../../img/index/wt.png') %>" alt="Wang Tao">
+							<img class="avatar" src="<%= require('../../img/index/wt.png') %>" alt="Wang Tao">
 						</div>
 						<p class="name">Wang Tao</p>
 					</div>
@@ -858,7 +858,7 @@
 				<div class="col-md-3 col-xxs-4">
 					<div class="head">
 						<div class="head-wrapper">
-							<img src="<%= require('../../img/index/cy.png') %>" alt="Cheng Yuan">
+							<img class="avatar" src="<%= require('../../img/index/cy.png') %>" alt="Cheng Yuan">
 						</div>
 						<p class="name">Cheng Yuan</p>
 					</div>
@@ -866,7 +866,7 @@
 				<div class="col-md-3 col-xxs-4  ">
 					<div class="head">
 						<div class="head-wrapper">
-							<img src="<%= require('../../img/index/BM.png') %>" alt="BMAN Lee">
+							<img class="avatar" src="<%= require('../../img/index/BM.png') %>" alt="BMAN Lee">
 						</div>
 						<p class="name">BMAN Lee</p>
 					</div>

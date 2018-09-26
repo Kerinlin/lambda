@@ -189,7 +189,7 @@ var config = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    host:"172.16.0.118",
+    // host:"172.16.0.118",
     port: 9090,
     open: false
   }
@@ -202,7 +202,7 @@ pages.forEach(function(pathname) {
     alwaysWriteToDisk: true,
     filename: "../dist/" + pathname + ".html",
     template: "src/view/pages/" + pathname + ".js",
-    inject: false,
+    inject: true,
     minify: {
       removeComments: true,
       collapseWhitespace: true
@@ -211,7 +211,7 @@ pages.forEach(function(pathname) {
 
   if (pathname in config.entry) {
     conf.favicon = path.resolve(__dirname, "src/img/favicon.ico");
-    conf.inject = "body";
+    // conf.inject = "body";
     conf.chunks = ["vendors", pathname];
     conf.hash = true;
   }

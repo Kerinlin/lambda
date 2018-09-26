@@ -8,4 +8,4 @@ require("../../css/common/footer.less");
 require("../../css/common/feature.less");
 //引入js
 require("../../js/components/header.js");
-require("../../js/components/cookie.js");
+// require("../../js/components/cookie.js");

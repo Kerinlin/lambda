@@ -12,7 +12,7 @@ require("../../../node_modules/swiper/dist/css/swiper.min.css");
 require("../components/jquery-confirm/jquery-confirm.js");
 require("../components/jquery-confirm/jquery-confirm.less");
 require("../../js/components/header.js");
-require("../../js/components/cookie.js");
+// require("../../js/components/cookie.js");
 require("jquery-countdown");
 require("../../../node_modules/swiper/dist/js/swiper.min.js");
 
@@ -39,6 +39,13 @@ $(document).ready(function() {
         event.strftime("%S") +
         "</p>"
     );
+    if(event.type=="finish"){
+      $(this).html(
+        "<h3>" +
+        "Lambda ICO is over"+
+        "</h3>"
+      )
+    }
   });
 
   const parsed = queryString.parse(location.search);
