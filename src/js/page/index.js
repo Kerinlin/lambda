@@ -43,7 +43,7 @@ $(document).ready(function() {
       $(this).html(
         "<h3>"
         +
-        "Thank you all for participating and supporting Lambda, public sale is closed."
+        "Спасибо всем за участие и поддержку Lambda, публичная продажа закрыта."
         +
         "</h3>"
       )
