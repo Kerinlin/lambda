@@ -41,8 +41,10 @@ $(document).ready(function() {
     );
     if(event.type=="finish"){
       $(this).html(
-        "<h3>" +
-        "Lambda ICO is over"+
+        "<h3>"
+        +
+        "Thank you all for participating and supporting Lambda, public sale is closed."
+        +
         "</h3>"
       )
     }

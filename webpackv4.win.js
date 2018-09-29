@@ -192,7 +192,7 @@ var config = {
     host:"localhost",
     port: 9090,
     hot: true,
-    open: false
+    open: true
   }
 };
 
