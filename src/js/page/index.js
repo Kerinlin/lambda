@@ -24,7 +24,7 @@ var queryString = require("query-string");
 $(document).ready(function() {
   // 增加事件
   //倒计时
-  $("#time").countdown(new Date(2018, 8, 2, 14, 0, 0), function(event) {
+  $("#time").countdown(new Date(2018, 9, 2, 14, 0, 0), function(event) {
     $(this).html(
       "<p>" +
         event.strftime("%n") +
@@ -39,16 +39,23 @@ $(document).ready(function() {
         event.strftime("%S") +
         "</p>"
     );
+    $('#newTop').css("display","none");
+    $('#top').css("display","block");
+    $('.newBottom').css("display","none");
+    $('.bottom').css("display","block");
     if(event.type=="finish"){
-      $(this).html(
-        "<h2>Public Sale is closed!</h2>"+
-        "<h3 style='font-size:17px;margin-top:25px;line-height:30px;'>Thank you all for participating and supporting Lambda.Lambda will share with you exciting milestones on official telegram group.Please stay tuned.</h3>"
-      );
-      $(".eth-adress").css("display","none");
-      $(".ico-title").html("Public Sale is closed!");
-      $(".ico-intro").css("display","none");
-      $(".introduce").css("display","none");
-      $(".btn-tem1").html("demo");
+      $('.eth-adress').css("display","none");
+      $('#top').css("display","none");
+      $('#newTop').css("display","block");
+      if(window.navigator.language !=='zh-CN'){
+        $(".in").css("display","none");
+        $(".out").css("display","block");
+      }else{
+        $(".out").css("display","none");
+        $(".in").css("display","block");
+      }
+      $('.bottom').css("display","none");
+      $('.newBottom').css("display","block");       
     }
   });
 

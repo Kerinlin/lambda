@@ -9,7 +9,8 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide container new">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						
+						<div id="top" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-10 row1">
 								<h2 class="ico-title">
 									<%=lang.section1.slide3.title1%>
@@ -20,8 +21,7 @@
 									<a style="color:#3cdcd1" target="_blank" href="https://t.me/HelloLambda">https://t.me/HelloLambda</a>
 									<%=lang.section1.slide3.introduce2%>
 								</span>
-										<video class="video in" style="display:none" controls="controls" poster="<%= require('../../img/index/fm1.jpg') %>"
-										 autoplay="autoplay">
+										<video class="video in" style="display:none" controls="controls" poster="<%= require('../../img/index/fm1.jpg') %>" autoplay="autoplay">
 											<source src="https://www.lambda.im/assets/video/1537251347221346.mp4" type="video/mp4">
 										</video>
 										<iframe class="video out" style="display:none" src="https://www.youtube.com/embed/O6olM_dry08" frameborder="0"
@@ -41,6 +41,63 @@
 								</div>
 								<a class="btn-tem1" href="https://token.lambda.im/#/register" id="contribute">
 									<%=lang.section1.slide3.btnName%></a>
+							</div>
+						</div>
+
+						<div id="newTop" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="finishIco">
+									<h3 style="text-align: center;font-size: 28px;">Thank you all for participating and supporting Lambda,Public Sale is closed!</h3>
+									<div class="video-container">
+										<video class="newVideo in" style="display:none" controls="controls" autoplay="autoplay" poster="<%= require('../../img/index/fm1.jpg') %>">
+											 <source src="https://www.lambda.im/assets/video/1537251347221346.mp4" type="video/mp4">
+										 </video>
+										<iframe class="newVideo out" style="display:none" src="https://www.youtube.com/embed/O6olM_dry08" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									</div>
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 newBottom">
+							<h3 class="subtitle2">
+								<%=lang.section1.slide3.title3%>
+							</h3>
+							<div class="part-wrapper col-lg-12 col-md-12 col-sm-12  col-xs-12 col-xxs-12">
+
+								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
+									<div class="partners-logo partners-logoyfy">
+										<img class="bitman" style="height:20px;" src="<%= require('../../img/partner/Bitman.png') %>" alt="Bitman">
+									</div>
+								</div>
+
+								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
+									<div class="partners-logo partners-logoyfy">
+										<img class="yfy" src="<%= require('../../img/partner/1_zhenge.png') %>" alt="zhenge">
+									</div>
+								</div>
+
+								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
+									<div class="partners-logo partners-logoyfy">
+										<img class="yfy" src="<%= require('../../img/partner/2_daduhui.png') %>" alt="daduhui">
+									</div>
+								</div>
+
+								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
+									<div class="partners-logo partners-logoyfy">
+										<img class="yfy" src="<%= require('../../img/partner/4_ceyuan.png') %>" alt="ceyuan">
+									</div>
+								</div>
+
+								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
+									<div class="partners-logo partners-logoyfy">
+										<img class="yfy" src="<%= require('../../img/partner/6_BlockVC.png') %>" alt="BlockVC">
+									</div>
+								</div>
+
+								<div class="part more col-lg-1 col-md-1 col-sm-3 col-xs-5 col-xxs-6">
+									<a href="#partners">
+										<span class="dot dot1"></span>
+										<span class="dot dot2"></span>
+										<span class="dot dot3"></span>
+									</a>
+								</div>
 							</div>
 						</div>
 
@@ -218,6 +275,7 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
 				<div class="swiper-pagination">
 				</div>
@@ -1037,9 +1095,9 @@
 		</div>
 	</section>
 
-	<!-- <div class="star-field">
+	<div class="star-field">
 		<div class="layer"></div>
 		<div class="layer"></div>
 		<div class="layer"></div>
-	</div> -->
+	</div>
 </div>
