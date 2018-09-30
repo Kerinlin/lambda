@@ -24,7 +24,7 @@ var queryString = require("query-string");
 $(document).ready(function() {
   // 增加事件
   //倒计时
-  $("#time").countdown(new Date(2018, 9, 2, 14, 0, 0), function(event) {
+  $("#time").countdown(new Date(2018, 8, 2, 14, 0, 0), function(event) {
     $(this).html(
       "<p>" +
         event.strftime("%n") +
@@ -39,14 +39,12 @@ $(document).ready(function() {
         event.strftime("%S") +
         "</p>"
     );
-    $('#newTop').css("display","none");
-    $('#top').css("display","block");
-    $('.newBottom').css("display","none");
-    $('.bottom').css("display","block");
+   
     if(event.type=="finish"){
       $('.eth-adress').css("display","none");
       $('#top').css("display","none");
       $('#newTop').css("display","block");
+      $('.finishIco').css("display","block");
       if(window.navigator.language !=='zh-CN'){
         $(".in").css("display","none");
         $(".out").css("display","block");
