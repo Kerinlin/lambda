@@ -41,8 +41,6 @@ $(document).ready(function() {
     );
    
     if(event.type=="finish"){
-      $('.eth-adress').css("display","none");
-      $('.finishIco').css("display","block");
       if(window.navigator.language !=='zh-CN'){
         $(".in").css("display","none");
         $(".out").css("display","block");
