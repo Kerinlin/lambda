@@ -42,8 +42,6 @@ $(document).ready(function() {
    
     if(event.type=="finish"){
       $('.eth-adress').css("display","none");
-      $('#top').css("display","none");
-      $('#newTop').css("display","block");
       $('.finishIco').css("display","block");
       if(window.navigator.language !=='zh-CN'){
         $(".in").css("display","none");
@@ -51,9 +49,7 @@ $(document).ready(function() {
       }else{
         $(".out").css("display","none");
         $(".in").css("display","block");
-      }
-      $('.bottom').css("display","none");
-      $('.newBottom').css("display","block");       
+      }     
     }
   });
 
