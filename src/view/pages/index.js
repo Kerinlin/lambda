@@ -1,5 +1,5 @@
 
-const content = require('./index.ejs');
+const content = require('./coin/coin.ejs');
 const layout = require('../layout/html/html.js');
 const lang = require('../lang');
 const pageConfig = {
