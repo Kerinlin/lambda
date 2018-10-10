@@ -98,9 +98,8 @@ var config = {
                             publicPath: '../'
                         }
                     },
-                    
-                    "css-loader",
-                    "less-loader"
+                    "less-loader",
+                    "css-loader"                  
                 ]
                 //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
 
