@@ -8,12 +8,7 @@ var ImageminPlugin = require('imagemin-webpack-plugin').default;
 var HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 const debug = process.env.ENV !== 'production';
-
-
-
-
 var entries = getEntry('src/js/page/**/**.js', 'src/js/page/');
 var chunks = Object.keys(entries);
 // 'publicPath': '/dist/',
@@ -215,8 +210,6 @@ pages.forEach(function (pathname) {
         // conf.inject = 'body';
         conf.chunks = ['vendors', pathname];
         conf.hash = true;
-
-
     }
 
     config.plugins.push(new HtmlWebpackPlugin(conf));

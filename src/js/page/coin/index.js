@@ -20,7 +20,8 @@ $(document).ready(function() {
     $.alert("Content has copied");
     e.clearSelection();
   });
-
+  
+  var queryString = require("query-string");
   const parsed = queryString.parse(location.search);
   var from = parsed.from;
   // #tokenregister
