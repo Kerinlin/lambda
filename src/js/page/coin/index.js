@@ -20,7 +20,7 @@ $(document).ready(function() {
     $.alert("Content has copied");
     e.clearSelection();
   });
-  
+
   var queryString = require("query-string");
   const parsed = queryString.parse(location.search);
   var from = parsed.from;
@@ -32,8 +32,5 @@ $(document).ready(function() {
       "href",
       "https://token.lambda.im/index.html?from=" + from + "#/register"
     );
-  }
-
-
-  
+  } 
 });
