@@ -6,6 +6,20 @@ $(document).ready(function(){
 		maoId	= indexmao[$(this).index()];
 		$("html,body").animate({scrollTop: $('#'+maoId).offset().top}, 500);
 	})
+
+  var queryString = require("query-string");
+  const parsed = queryString.parse(location.search);
+  var from = parsed.from;
+  // #tokenregister
+  //#tokenwhitelist
+
+  if (from) {
+    $("#tokenregister").attr(
+      "href",
+      "https://token.lambda.im/index.html?from=" + from + "#/register"
+    );
+  }
+
 	$(document).scroll( function (event){
 			var  topScroll = $(window).scrollTop();
 			if(topScroll>50){

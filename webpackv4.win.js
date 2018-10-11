@@ -75,7 +75,7 @@ var config = {
             options: {
               // you can specify a publicPath here
               // by default it use publicPath in webpackOptions.output
-              publicPath: "../"
+              publicPath: "/"
             }
           },
 
@@ -91,7 +91,7 @@ var config = {
             options: {
               // you can specify a publicPath here
               // by default it use publicPath in webpackOptions.output
-              publicPath: "../"
+              publicPath: "/"
             }
           },
 
@@ -189,7 +189,7 @@ var config = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    host:"localhost",
+    host:"172.16.0.246",
     port: 9090,
     hot: true,
     open: true

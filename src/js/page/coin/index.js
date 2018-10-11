@@ -19,18 +19,5 @@ $(document).ready(function() {
   clipboard.on("success", function(e) {
     $.alert("Content has copied");
     e.clearSelection();
-  });
-
-  var queryString = require("query-string");
-  const parsed = queryString.parse(location.search);
-  var from = parsed.from;
-  // #tokenregister
-  //#tokenwhitelist
-
-  if (from) {
-    $("#tokenregister").attr(
-      "href",
-      "https://token.lambda.im/index.html?from=" + from + "#/register"
-    );
-  } 
+  }); 
 });

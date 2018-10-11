@@ -90,11 +90,11 @@ var config = {
                         options: {
                             // you can specify a publicPath here
                             // by default it use publicPath in webpackOptions.output
-                            publicPath: '../'
                         }
                     },
-                    "less-loader",
-                    "css-loader"                  
+                    "css-loader",
+                    "less-loader"
+                                      
                 ]
                 //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
 
