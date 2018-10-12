@@ -7,23 +7,31 @@ require("../../css/common/grid.less");
 require("../../css/common/header.less");
 require("../../css/common/footer.less");
 require("../../css/page/index.less");
-require("../../../node_modules/swiper/dist/css/swiper.min.css");
+import Swiper from "swiper";
+require("swiper/dist/idangerous.swiper.css");
 //引入 js
 require("../components/jquery-confirm/jquery-confirm.js");
 require("../components/jquery-confirm/jquery-confirm.less");
 require("../../js/components/header.js");
 // require("../../js/components/cookie.js");
 require("jquery-countdown");
-require("../../../node_modules/swiper/dist/js/swiper.min.js");
 
-import Swiper from 'swiper';
+
 
 var queryString = require("query-string");
 // import queryString from 'query-string'
+// alert(navigator.userAgent);
+
+
 
 $(document).ready(function() {
   // 增加事件
   //倒计时
+
+
+
+
+
   $("#time").countdown(new Date(2018, 8, 2, 14, 0, 0), function(event) {
     $(this).html(
       "<p>" +
@@ -39,15 +47,15 @@ $(document).ready(function() {
         event.strftime("%S") +
         "</p>"
     );
-   
-    if(event.type=="finish"){
-      if(window.navigator.language !=='zh-CN'){
-        $(".in").css("display","none");
-        $(".out").css("display","block");
-      }else{
-        $(".out").css("display","none");
-        $(".in").css("display","block");
-      }     
+
+    if (event.type == "finish") {
+      if (window.navigator.language !== "zh-CN") {
+        $(".in").css("display", "none");
+        $(".out").css("display", "block");
+      } else {
+        $(".out").css("display", "none");
+        $(".in").css("display", "block");
+      }
     }
   });
 
@@ -92,13 +100,20 @@ $(document).ready(function() {
   });
 
   var mySwiper = new Swiper(".swiper-container", {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      type: "bullets",
-      bulletClass: "my-bullet",
-      bulletActiveClass: "my-bullet-active"
-    },
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    //   type: "bullets",
+    //   bulletClass: "my-bullet",
+    //   bulletActiveClass: "my-bullet-active"
+    // },
+    pagination:'.swiper-pagination',
+    paginationClickable :true,
+    paginationElementClass : 'my-bullet',
+    paginationActiveClass:"my-bullet-active",
+    wrapperClass : 'swiper-wrapper',
+    slideClass:"swiper-slide",
+    mode : 'horizontal',
     loop: true
     // autoplay:{
     // 	disableOnInteraction: true,
@@ -108,20 +123,26 @@ $(document).ready(function() {
 
   // console.log( window.navigator.language );
 
-  if(window.navigator.language !=='zh-CN'){
-    $(".in").css("display","none");
-    $(".out").css("display","block");
-  }else{
-    $(".out").css("display","none");
-    $(".in").css("display","block");
+  if (window.navigator.language !== "zh-CN") {
+    $(".in").css("display", "none");
+    $(".out").css("display", "block");
+  } else {
+    $(".out").css("display", "none");
+    $(".in").css("display", "block");
   }
 
-  $('.ru').click(function(){
-		$('.img').attr('src',"https://cdn.wpml.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.png?x53954");
-		$('.title').html('Russia');
-	})
-	$('.en').click(function(){
-		$('.img').attr('src',"https://www.coinex8.com/static/media/02_02.language_english.67e1a74c.svg");
-		$('.title').html('English');
-	})
+  $(".ru").click(function() {
+    $(".img").attr(
+      "src",
+      "https://cdn.wpml.org/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.png?x53954"
+    );
+    $(".title").html("Russia");
+  });
+  $(".en").click(function() {
+    $(".img").attr(
+      "src",
+      "https://www.coinex8.com/static/media/02_02.language_english.67e1a74c.svg"
+    );
+    $(".title").html("English");
+  });
 });

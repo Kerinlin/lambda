@@ -1,0 +1,17 @@
+{
+  "section1":{
+    "title1":"Your exclusive page to make investment using your LAMBP!",
+    "title2":"1ETH=30000LAMB,End time : 12/10/18(14:00UTC)",
+    "title3":"Annoucement",
+    "intro1":"*Personal wallet only！Do not use the exchange address to transfer your ETH ！",
+    "intro2":"*Please do not trust anybody or transfer your ETH personally except the official website or Coinchase",
+    "intro3":"*During round2,please note that we reward users from bountry.global as 1LAMB=$0.01 and 1 ETH= 30000LAMB"
+  },
+  "section2":{
+    "title1":"Official ETH Address",
+    "intro1":"0xf12f3F09010336F3677E8AC4e18a71650e634820",
+    "btnName":"Copy to clipboard",
+    "title2":"Official Smart Contracts Address",  
+    "intro2":"0x8971f9fd7196e5cEE2C1032B50F656855af7Dd26"
+  } 
+}
