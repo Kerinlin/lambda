@@ -75,9 +75,10 @@ $(document).ready(function() {
 
 
   let lang = (navigator.language || navigator.browserLanguage).toLowerCase();
+  alert(lang);
   if (lang !== "zh-cn") {
-    $(".in").css("display", "none");
-    $(".out").css("display", "block");
+    // $(".in").css("display", "none");
+    // $(".out").css("display", "block");
   }
 
   $(".ru").click(function() {
