@@ -254,6 +254,10 @@ section.banner-contents {
           }
         }
       }
+      .newVideo{
+        object-fit: fill;
+        margin: 10px auto;
+      }
       .newBottom {
         .subtitle2 {
           font-size: 28px;
@@ -328,10 +332,7 @@ section.banner-contents {
         font-family: DINCondensed-Bold, DINCondensedBold;
         font-size: 18px;
         background: linear-gradient(174.6deg,rgba(61, 221, 209, 1),rgba(0, 183, 255, 1));
-      }
-      .newVideo{
-        margin: 15px auto;
-      }
+      }      
     }
   }
 }
@@ -840,8 +841,6 @@ section.partners {
     display: none;
   }
 }
-
-
 @media (min-width: 992px) {
   .tab-btn {
     .item {
@@ -991,10 +990,10 @@ section.partners {
         width: 220px;
         height: 100px;
       }
-      .newVideo{
-        width: 80vw;
+      .newVideo{       
+        width: 60%;
         height: 30vh;
-        object-fit: fill;
+        margin: 0 auto;
       }
       h3{
         font-size: 14px;
@@ -1038,7 +1037,11 @@ section.partners {
       font-size: 32px;
     }
     .swiper-container{
-      height: 700px;
+      height: 750px;
+      .newVideo{
+        width: 80%;
+        height: 35vh;      
+      }
     }
   }
 

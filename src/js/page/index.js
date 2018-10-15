@@ -16,48 +16,11 @@ require("../../js/components/header.js");
 // require("../../js/components/cookie.js");
 require("jquery-countdown");
 
-
-
 var queryString = require("query-string");
 // import queryString from 'query-string'
 // alert(navigator.userAgent);
 
-
-
 $(document).ready(function() {
-  // 增加事件
-  //倒计时
-
-
-
-
-
-  $("#time").countdown(new Date(2018, 8, 2, 14, 0, 0), function(event) {
-    $(this).html(
-      "<p>" +
-        event.strftime("%n") +
-        "</p> " +
-        "<p>" +
-        event.strftime("%H") +
-        "</p>:" +
-        "<p>" +
-        event.strftime("%M") +
-        "</p>:" +
-        "<p>" +
-        event.strftime("%S") +
-        "</p>"
-    );
-
-    if (event.type == "finish") {
-      if (window.navigator.language !== "zh-CN") {
-        $(".in").css("display", "none");
-        $(".out").css("display", "block");
-      } else {
-        $(".out").css("display", "none");
-        $(".in").css("display", "block");
-      }
-    }
-  });
 
   const parsed = queryString.parse(location.search);
   var from = parsed.from;
@@ -100,35 +63,22 @@ $(document).ready(function() {
   });
 
   var mySwiper = new Swiper(".swiper-container", {
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    //   type: "bullets",
-    //   bulletClass: "my-bullet",
-    //   bulletActiveClass: "my-bullet-active"
-    // },
-    pagination:'.swiper-pagination',
-    paginationClickable :true,
-    paginationElementClass : 'my-bullet',
-    paginationActiveClass:"my-bullet-active",
-    wrapperClass : 'swiper-wrapper',
-    slideClass:"swiper-slide",
-    mode : 'horizontal',
+    pagination: ".swiper-pagination",
+    paginationClickable: true,
+    paginationElementClass: "my-bullet",
+    paginationActiveClass: "my-bullet-active",
+    wrapperClass: "swiper-wrapper",
+    slideClass: "swiper-slide",
+    mode: "horizontal",
     loop: true
-    // autoplay:{
-    // 	disableOnInteraction: true,
-    // },
-    // speed: 4000,
   });
 
-  // console.log( window.navigator.language );
 
-  if (window.navigator.language !== "zh-CN") {
+  let lang = (navigator.language || navigator.browserLanguage).toLowerCase();
+  alert(lang);
+  if (lang !== "zh-cn") {
     $(".in").css("display", "none");
     $(".out").css("display", "block");
-  } else {
-    $(".out").css("display", "none");
-    $(".in").css("display", "block");
   }
 
   $(".ru").click(function() {
