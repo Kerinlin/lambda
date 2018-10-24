@@ -1,217 +1,57 @@
 <div id="body">
 	<div class="bg"></div>
 
-	<section class="banner-contents  firstbgimg">
+	<section id="lambda" class="use lambda-intro">
 		<div class="container">
-			<h4 class="eth-adress" style="text-align: center;font-size: 28px;margin-bottom: 30px;display:none;">
-				<%=lang.section1.slide3.title2%>
-			</h4>
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide new">
+			<div class="title-wrapper mt-20">
+				<h1><%=lang.section1.title1%></h1>
+				<h3 class="mt-20"><%=lang.section1.title2%></h3>
+			</div>
+			<div class="video-wrapper mt-20">
+				<video class="newVideo" src="https://www.lambda.im/assets/video/1537251347221346.mp4" controls="controls" autoplay="autoplay"
+				 poster="<%= require('../../img/index/fm1.jpg') %>">
+				</video>
+			</div>
 
-						<div id="newTop" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="finishIco">
-								<h3 style="text-align: center;font-size: 28px;">
-									<%=lang.section1.slide3.endTitle%>
-								</h3>
-								<div class="video-container">
-									<video class="newVideo in" style="display:block" src="https://www.lambda.im/assets/video/1537251347221346.mp4"
-									 controls="controls" autoplay="autoplay" poster="<%= require('../../img/index/fm1.jpg') %>">
-									</video>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 newBottom">
-							<h3 class="subtitle2">
-								<%=lang.section1.slide3.title3%>
-							</h3>
-							<div class="part-wrapper col-lg-12 col-md-12 col-sm-12  col-xs-12 col-xxs-12">
-
-								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
-									<div class="partners-logo partners-logoyfy">
-										<img class="bitman" style="height:20px;" src="<%= require('../../img/partner/Bitman.png') %>" alt="Bitman">
-									</div>
-								</div>
-
-								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
-									<div class="partners-logo partners-logoyfy">
-										<img class="yfy" src="<%= require('../../img/partner/1_zhenge.png') %>" alt="zhenge">
-									</div>
-								</div>
-
-								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
-									<div class="partners-logo partners-logoyfy">
-										<img class="yfy" src="<%= require('../../img/partner/2_daduhui.png') %>" alt="daduhui">
-									</div>
-								</div>
-
-								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
-									<div class="partners-logo partners-logoyfy">
-										<img class="yfy" src="<%= require('../../img/partner/4_ceyuan.png') %>" alt="ceyuan">
-									</div>
-								</div>
-
-								<div class="part col-lg-2 col-md-2 col-sm-3 col-xs-5 col-xxs-6">
-									<div class="partners-logo partners-logoyfy">
-										<img class="yfy" src="<%= require('../../img/partner/6_BlockVC.png') %>" alt="BlockVC">
-									</div>
-								</div>
-
-								<div class="part more col-lg-1 col-md-1 col-sm-3 col-xs-5 col-xxs-6">
-									<a href="#partners">
-										<span class="dot dot1"></span>
-										<span class="dot dot2"></span>
-										<span class="dot dot3"></span>
+			<div class="btn-wrapper mt-20">
+				<a class="btn" href="https://www.lambda.im/doc/Lambda-WhitePaper-en.pdf" target="_blank"><%=lang.section1.btnName1%></a>
+				<a class="btn" href="https://www.lambda.im/doc/Lambda-Economic-White-Paper.pdf" target="_blank"><%=lang.section1.btnName2%></a>
+			</div>
+			<div class="contact-wrapper mt-20">
+					<div class="contact">
+							<ul>
+								<li>
+									<a class="telegram" href="https://t.me/HelloLambda" target="_blank">
 									</a>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="swiper-slide">
-						<div class="col-md-12">
-							<h2 style="margin-bottom: 30px;font-size: 29px;">
-								<%=lang.section1.slide1.title1%>
-							</h2>
-							<h3 style="margin-bottom: 30px;font-size: 26px;">
-								<%=lang.section1.slide1.title2%>
-							</h3>
-							<p style="opacity:0.8;font-size:14px;text-align: left;">
-								<%=lang.section1.slide1.introduce%>
-							</p>
-							<a class="btn firstBtn" href="https://www.lambda.im/doc/Lambda-WhitePaper-en.pdf" target="_blank">
-								<%=lang.section1.slide1.btnName%></a>
-							<div class="contact">
-								<ul>
-									<li>
-										<a class="telegram" href="https://t.me/HelloLambda" target="_blank">
-										</a>
-									</li>
-									<li>
-										<a class="twitter" href="https://twitter.com/Lambdaim" target="_blank">
-										</a>
-									</li>
-									<li class="wechatitem">
-										<a class="wechat" href="https://mp.weixin.qq.com/s/rW3pOxzJwI1HXrTESTYxWA" target="_blank">
-										</a>
-										<img alt="weichhart lambda" style="width:100px" class="wechatQRcode" src="<%= require('../../img/index/wechartrq.png') %>" />
-									</li>
-									<li>
-										<a class="facebook" href="https://www.facebook.com/Lambdaim" target="_blank">
-										</a>
-									</li>
-									<li>
-										<a class="linkedin" href="https://www.linkedin.com/company/lambdaim" target="_blank">
-										</a>
-									</li>
-									<li>
-										<a class="weibo" href="https://www.weibo.com/lambdaim?is_all=1" target="_blank">
-										</a>
-									</li>
-									<li>
-										<a class="github" href="https://github.com/LambdaIM" target="_blank">
-											<img src="<%= require('../../img/index/github.png') %>" alt="github">
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="swiper-slide">
-						<div class="col-md-12">
-							<% if(langType == 'en') {%>
-							<div>
-								<div class="col-sm-9 col-md-6 col-lg-6">
-									<h2 style="margin-bottom: 30px;font-size: 29px;">
-										<%=lang.section1.slide2.title1%>
-									</h2>
-									<h2 style="margin-bottom: 30px;font-size: 29px;">
-										<%=lang.section1.slide2.title2%>
-									</h2>
-									<h3 style="margin-bottom: 30px;font-size: 26px;">
-										<%=lang.section1.slide2.title3%>
-									</h3>
-									<p style="opacity:0.8;font-size:14px;text-align: left;width: 90%">
-										<%=lang.section1.slide2.introduce%>
-									</p>
-								</div>
-								<div class="col-sm-2  col-md-5 col-lg-6 logo-container">
-									<a href="">
-										<img src="<%= require('../../img/index/fimg2.png') %>" alt="lambda">
+								</li>
+								<li>
+									<a class="twitter" href="https://twitter.com/Lambdaim" target="_blank">
 									</a>
-								</div>
-							</div>
-							<% } else if(langType == 'ru'){ %>
-							<div>
-								<div class="col-sm-9 col-md-8 col-lg-7">
-									<h2 style="margin-bottom: 30px;font-size: 29px;">
-										<%=lang.section1.slide2.title1%>
-									</h2>
-									<h2 style="margin-bottom: 30px;font-size: 29px;">
-										<%=lang.section1.slide2.title2%>
-									</h2>
-									<h3 style="margin-bottom: 30px;font-size: 22px;">
-										<%=lang.section1.slide2.title3%>
-									</h3>
-									<p style="opacity:0.8;font-size:14px;text-align: left;width: 90%">
-										<%=lang.section1.slide2.introduce%>
-									</p>
-								</div>
-								<div class="col-sm-2 col-md-4 col-lg-5 logo-container">
-									<a href="">
-										<img src="<%= require('../../img/index/fimg2.png') %>" alt="lambda">
+								</li>
+								<li class="wechatitem">
+									<a class="wechat" href="https://mp.weixin.qq.com/s/rW3pOxzJwI1HXrTESTYxWA" target="_blank">
 									</a>
-								</div>
-							</div>
-							<% } %>
-							<div class="col-md-12 col-sm-12">
-								<a class="btn firstBtn" href="https://www.lambda.im/doc/Lambda-Economic-White-Paper.pdf" target="_blank">
-									<%=lang.section1.slide2.btnName%></a>
-								<div class="contact">
-									<ul>
-										<li>
-											<a class="telegram" href="https://t.me/HelloLambda" target="_blank">
-											</a>
-										</li>
-										<li>
-											<a class="twitter" href="https://twitter.com/Lambdaim" target="_blank">
-											</a>
-										</li>
-										<li class="wechatitem">
-											<a class="wechat" href="https://mp.weixin.qq.com/s/rW3pOxzJwI1HXrTESTYxWA" target="_blank">
-											</a>
-											<img alt="weichhart lambda" style="width:100px" class="wechatQRcode" src="<%= require('../../img/index/wechartrq.png') %>" />
-										</li>
-										<li>
-											<a class="facebook" href="https://www.facebook.com/Lambdaim" target="_blank">
-											</a>
-										</li>
-										<li>
-											<a class="linkedin" href="https://www.linkedin.com/company/lambdaim" target="_blank">
-											</a>
-										</li>
-										<li>
-											<a class="weibo" href="https://www.weibo.com/lambdaim?is_all=1" target="_blank">
-											</a>
-										</li>
-										<li>
-											<a class="github" href="https://github.com/LambdaIM" target="_blank">
-												<img src="<%= require('../../img/index/github.png') %>" alt="github">
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
+									<img alt="weichhart lambda" style="width:100px" class="wechatQRcode" src="<%= require('../../img/index/wechartrq.png') %>" />
+								</li>
+								<li>
+									<a class="facebook" href="https://www.facebook.com/Lambdaim" target="_blank">
+									</a>
+								</li>
+								<li>
+									<a class="linkedin" href="https://www.linkedin.com/company/lambdaim" target="_blank">
+									</a>
+								</li>
+								<li>
+									<a class="weibo" href="https://www.weibo.com/lambdaim?is_all=1" target="_blank">
+									</a>
+								</li>
+								<li>
+									<a class="github" href="https://github.com/LambdaIM" target="_blank">
+										<img src="<%= require('../../img/index/github.png') %>" alt="github">
+									</a>
+								</li>
+							</ul>
 						</div>
-					</div>
-
-				</div>
-				<div class="swiper-pagination">
-				</div>
 			</div>
 		</div>
 	</section>
@@ -222,14 +62,14 @@
 				<%=lang.section2.title%>
 			</h1>
 			<div class="crowd col-md-12" style="text-align: left">
-				<p style="opacity:0.8;font-size:14px;text-align: left;    width: 90%">
-					<%=lang.section2.introduce%>
+				<p class="p-intro">
+					<%=lang.section2.introduce1%>
 				</p>
-				<!-- <div class="col-xs-12">
-					<img width="50%" alt="demo pdp" src="<%= require('../../img/demo/pdp.jpg') %>">
-				</div> -->
-				<p style="opacity:0.8;font-size:14px;text-align: left;    width: 90%">
-					<a style="padding: 6px" class="btn sendBtn" href="http://demo.lambda.im/" target="_blank">
+				<p class="p-intro">
+					<%=lang.section2.introduce2%>
+				</p>
+				<p class="p-intro">
+					<a class="btn" href="http://demo.lambda.im/" target="_blank">
 						<%=lang.section2.btnName%></a>
 				</p>
 			</div>
@@ -875,7 +715,9 @@
 
 	<section id="partner" class="use partners">
 		<div class="container">
-			<h1><%=lang.section10.title%></h1>
+			<h1>
+				<%=lang.section10.title%>
+			</h1>
 
 			<div class="row partners-wrapper">
 
@@ -888,12 +730,12 @@
 				</div>
 
 				<div class="col-sm-4 col-xs-4 col-xxs-12">
-						<div class="partners-logo partners-logoyfy">
-							<a href="https://dvpnet.io/">
-								<img class="yfy" src="<%= require('../../img/partner/DVPnet.png') %>" alt="DVPnet">
-							</a>
-						</div>
+					<div class="partners-logo partners-logoyfy">
+						<a href="https://dvpnet.io/">
+							<img class="yfy" src="<%= require('../../img/partner/DVPnet.png') %>" alt="DVPnet">
+						</a>
 					</div>
+				</div>
 
 			</div>
 		</div>
@@ -906,135 +748,135 @@
 				<%=lang.section11.title%>
 			</h1>
 			<div class="row partners-wrapper">
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/Bitman.png') %>" alt="Bitman">
 					</div>
 				</div>
-				<div class="partners768  col-sm-4 col-xs-4  col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4  col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/1_zhenge.png') %>" alt="zhenge">
 					</div>
 				</div>
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/2_daduhui.png') %>" alt="daduhui">
 					</div>
 				</div>
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/3_DFund.png') %>" alt="DFund">
 					</div>
 				</div>
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/4_ceyuan.png') %>" alt="ceyuan">
 					</div>
 				</div>
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/5_fanzheng.png') %>" alt="fanzheng">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/FBG.png') %>" alt="FBG">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/6_BlockVC.png') %>" alt="BlockVC">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/1.yingbiziben.png') %>" alt="yingbiziben">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/2.kosmos.png') %>" alt="kosmos">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/3.NGC.png') %>" alt="NGC">
 					</div>
 				</div>
 
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/7_IOST.png') %>" alt="IOST">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/8_DATA.png') %>" alt="DATA">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12 ">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12 ">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/4.timestamp.png') %>" alt="timestamp">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/5.feiniaoshequ.png') %>" alt="feiniaoshequ">
 					</div>
 				</div>
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/6.xinglianziben.png') %>" alt="xinglianziben">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/Genisis.png') %>" alt="Genisis">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/8.hongan.png') %>" alt="hongan">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/11_jiduziben.png') %>" alt="jiduziben">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/9_H-CAPITAL.png') %>" alt="CAPITAL">
 					</div>
 				</div>
 
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/10_sparkcapital.png') %>" alt="sparkcapital">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/7.bluehill.png') %>" alt="bluehill">
 					</div>
 				</div>
 
-				<div class="partners768  col-sm-4 col-xs-4 col-xxs-12">
+				<div class="mt-20  col-sm-4 col-xs-4 col-xxs-12">
 					<div class="partners-logo partners-logoyfy">
 						<img class="yfy" src="<%= require('../../img/partner/9.tokenmania.png') %>" alt="tokenmania">
 					</div>

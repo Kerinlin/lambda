@@ -17,35 +17,15 @@
     "menu7": "CONTACT US"
   },
   "section1": {
-    "slide1": {
-      "title1": "A Disruptor in Blockchain-Based Storage Solution",
-      "title2": "Providing Unlimited Storage Capabilities",
-      "introduce": "Lambda is a fast, safe, and scalable blockchain infrastructure project, which provides decentralized applications (DAPPs) data storage capabilities with unlimited scalability and fulfills services such as multi-chain data co-storage, cross-chain data management, data privacy protection, PDP, and distributed intelligent computing through logic decoupling and independent implementation of Lambda Chain and Lambda DB",
-      "btnName": "Download whitepaper"
-    },
-    "slide2": {
-      "title1": "One Small Step for Lambda",
-      "title2": "one Giant Leap for the Future",
-      "title3": "Information flow driven by finance",
-      "introduce": "Know more about design principles of Lambda’s Economic System",
-      "btnName": "Economic whitepaper"
-    },
-    "slide3": {
-      "title1": "Public Sale is on-going!",
-      "title2": "Official wallet ETH address：0xf12f3F09010336F3677E8AC4e18a71650e634820",
-      "title4":"Thank you all for participating and supporting Lambda",
-      "introduce1": "*Only trust the information from our official website and from our official Telegram group : ",
-      "introduce2": ".Please don’t use any exchange wallets.",
-      "timeStart":"Time of Public Sale Start : 14:00 UTC ,19th SEP，2018",
-      "timeEnd":"Time of Public Sale End: 14:00 UTC ,2nd OCT，2018,or before if hard cap is reached",
-      "btnName": "Go contribution!",
-      "endTitle":"Public Sale is closed,thank you all for participating and supporting Lambda",
-      "title3":"Lambda funded by 23 Top VCs"
-    }
+    "title1": "A Disruptor in Blockchain-Based Storage Solution",
+    "title2": "Providing Unlimited Storage Capabilities",
+    "btnName1": "Download whitepaper",
+    "btnName2": "Economic whitepaper"
   },
   "section2": {
     "title": "Lambda Provable Data Possession Demo",
-    "introduce": "We believe that all storage projects follow the core requirement of Provable Data Integrity.Also, it is crucial for data projects to store data in an infeasible storage node and make them trusted and secure, in the academic world, there are mainly two approaches which are Provable Data Possession (PDP) and Proofs of Retrievability (POR) depending on the usage scenarios. Lambda has applied these two approaches in blockchain through academic research and engineering verification, which has eliminated the core obstacles of decentralized storage.  ",
+    "introduce1":"Lambda is a fast, safe, and scalable blockchain infrastructure project, which provides decentralized applications (DAPPs) data storage capabilities with unlimited scalability and fulfills services such as multi-chain data co-storage, cross-chain data management, data privacy protection, PDP, and distributed intelligent computing through logic decoupling and independent implementation of Lambda Chain and Lambda DB",
+    "introduce2": "We believe that all storage projects follow the core requirement of Provable Data Integrity.Also, it is crucial for data projects to store data in an infeasible storage node and make them trusted and secure, in the academic world, there are mainly two approaches which are Provable Data Possession (PDP) and Proofs of Retrievability (POR) depending on the usage scenarios. Lambda has applied these two approaches in blockchain through academic research and engineering verification, which has eliminated the core obstacles of decentralized storage.  ",
     "btnName": "Demo"
   },
   "section3": {
