@@ -73,57 +73,43 @@ section.lambda-intro {
     }
   }
   .btn-wrapper {
-    display: inline-block;
+    // text-align: center;
     a {
       margin-top: 10px;
       margin-left: 10px;
-      float: left;
     }
   }
+
   .contact-wrapper {
+    position: relative;
     .contact {
       width: 100%;
-      min-height: 60px;     
+      min-height: 60px;
+      li {
+        float: left;
+      }
       a {
         display: inline-block;
         width: 26px;
         height: 26px;
         margin-left: 10px;
       }
-      .wechatitem {
-        position: relative;
-        .wechatQRcode {
-          position: absolute;
-          display: none;
-        }
-        &:hover {
-          .wechatQRcode {
-            display: block;
-          }
-        }
-      }
       .telegram {
-        float: left;
         background: url("../../img/index/css_sprites.png") -2px -32px;
       }
       .twitter {
-        float: left;
         background: url("../../img/index/css_sprites.png") -32px -32px;
       }
       .wechat {
-        float: left;
         background: url("../../img/index/css_sprites.png") -62px -2px;
       }
       .facebook {
-        float: left;
         background: url("../../img/index/css_sprites.png") -2px -2px;
       }
       .linkedin {
-        float: left;
         background: url("../../img/index/css_sprites.png") -32px -2px;
       }
       .weibo {
-        float: left;
         background: url("../../img/index/css_sprites.png") -62px -32px;
       }
       .github {
@@ -248,17 +234,6 @@ section.demo {
   }
   p {
     color: #ffffff;
-  }
-  .btn {
-    margin-top: 21px;
-    display: inline-block;
-    color: #fff;
-    padding: 9px 32px 11px;
-    background: linear-gradient(
-      174.6deg,
-      rgba(61, 221, 209, 1),
-      rgba(0, 183, 255, 1)
-    );
   }
 }
 section.scene {
@@ -618,6 +593,9 @@ section.partners {
     }
   }
   section.lambda-intro {
+    .container{
+      padding-left: 150px;
+    }
     .newVideo {
       width: 60%;
       height: 280px;
@@ -729,6 +707,9 @@ section.partners {
   }
 
   section.lambda-intro {
+    .container{
+      padding-left: 20px !important;
+    }
     .newVideo {
       width: 80%;
       height: 35vh;
@@ -940,7 +921,18 @@ section.partners {
     }
   }
 }
-
+.wechatitem {
+  position: relative;
+  .wechatQRcode {
+    position: absolute;
+    display: none;
+  }
+  &:hover {
+    .wechatQRcode {
+      display: block;
+    }
+  }
+}
 .p-intro {
   opacity: 0.8;
   font-size: 14px;
