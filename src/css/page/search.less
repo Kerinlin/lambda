@@ -1,0 +1,51 @@
+@import "../common/lesshat";
+.container {
+  min-height: 800px;
+  .search-wrapper {
+    z-index: 99;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 200px;
+    color: #fff;
+    .search-content {
+      .title {
+        font-size: 28px;
+        color: #3dddd1;
+        background-image: -webkit-gradient( linear, 0 0, right bottom, from(rgba(61, 221, 209, 1)), to(rgba(0, 183, 255, 1)));
+        .background-clip(text);
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+      }
+      .input-wrapper {
+        .search-key {
+          border: none;
+          outline: none;
+          height: 40px;
+          width: 60%;
+        }
+        input::-webkit-input-placeholder {
+          /* placeholder颜色  */
+          color: #aab2bd;
+          /* placeholder字体大小  */
+          font-size: 14px;
+          /* placeholder位置  */
+          padding-left: 20px;
+        }
+        .search-button {
+          width: 60px;
+          height: 40px;
+          border: none;
+          color: #fff;
+          background: linear-gradient( 174.6deg, rgba(61, 221, 209, 1), rgba(0, 183, 255, 1));
+        }
+      }
+      .search-result {
+        margin-top: 40px;
+        .search-result-wrapper {
+          width: 64%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

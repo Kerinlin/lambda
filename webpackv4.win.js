@@ -14,219 +14,216 @@ var entries = getEntry("src/js/page/**/**.js", "src/js/page/");
 var chunks = Object.keys(entries);
 // 'publicPath': '/dist/',
 var settings = {
-  publicPath: "/",
-  urlLoader: "url-loader?limit=8192&name=./img/[name][hash].[ext]"
+    publicPath: "/",
+    urlLoader: "url-loader?limit=8192&name=./img/[name][hash].[ext]"
 };
 
 if (process.env.ENV == "production") {
-  console.log("production");
-  // settings.publicPath = '/ru/';
-  settings.publicPath = "/";
+    console.log("production");
+    // settings.publicPath = '/ru/';
+    settings.publicPath = "/";
 } else {
-  console.log("dev");
+    console.log("dev");
 }
 
 function getEntry(globPath, pathDir) {
-  var files = glob.sync(globPath);
-  var entries = {},
-    entry,
-    dirname,
-    basename,
-    pathname,
-    extname;
+    var files = glob.sync(globPath);
+    var entries = {},
+        entry,
+        dirname,
+        basename,
+        pathname,
+        extname;
 
-  for (var i = 0; i < files.length; i++) {
-    entry = files[i];
-    dirname = path.dirname(entry);
-    extname = path.extname(entry);
-    basename = path.basename(entry, extname);
-    pathname = path.normalize(path.join(dirname, basename));
-    pathDir = path.normalize(pathDir);
+    for (var i = 0; i < files.length; i++) {
+        entry = files[i];
+        dirname = path.dirname(entry);
+        extname = path.extname(entry);
+        basename = path.basename(entry, extname);
+        pathname = path.normalize(path.join(dirname, basename));
+        pathDir = path.normalize(pathDir);
 
-    if (pathname.startsWith(pathDir)) {
-      pathname = pathname.substring(pathDir.length);
+        if (pathname.startsWith(pathDir)) {
+            pathname = pathname.substring(pathDir.length);
+        }
+
+        pathname = pathname.replace(/\\/g, "/");
+
+        entries[pathname] = ["babel-polyfill", "./" + entry];
     }
 
-    pathname = pathname.replace(/\\/g, "/");
-
-    entries[pathname] = ["babel-polyfill", "./" + entry];
-  }
-
-  return entries;
+    return entries;
 }
 
 var config = {
-  entry: entries,
-  mode: process.env.ENV || "development",
-  target: "web",
-  output: {
-    path: path.join(__dirname, "dist"), //生成文件的根目录
-    publicPath: settings.publicPath, //针对浏览器的路径，开发环境和生产环境不一样
-    filename: "js/[name][hash].js",
-    chunkFilename: "js/[id][chunkhash].chunk.js"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // you can specify a publicPath here
-              // by default it use publicPath in webpackOptions.output
-              publicPath: "/"
+    entry: entries,
+    mode: process.env.ENV || "development",
+    target: "web",
+    output: {
+        path: path.join(__dirname, "dist"), //生成文件的根目录
+        publicPath: settings.publicPath, //针对浏览器的路径，开发环境和生产环境不一样
+        filename: "js/[name][hash].js",
+        chunkFilename: "js/[id][chunkhash].chunk.js"
+    },
+    module: {
+        rules: [{
+                test: /\.css$/,
+                use: [{
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                // you can specify a publicPath here
+                                // by default it use publicPath in webpackOptions.output
+                                publicPath: "/"
+                            }
+                        },
+
+                        "css-loader"
+                    ]
+                    //配置css的抽取器、加载器。'-loader'可以省去
+            },
+            {
+                test: /\.less$/,
+                use: [{
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                // you can specify a publicPath here
+                                // by default it use publicPath in webpackOptions.output
+                                publicPath: "/"
+                            }
+                        },
+
+                        "css-loader",
+                        "less-loader"
+                    ]
+                    //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
+            },
+            {
+                //html模板加载器，可以处理引用的静态资源，默认配置参数attrs=img:src，处理图片的src引用的资源
+                //比如你配置，attrs=img:src img:data-src就可以一并处理data-src引用的资源了，就像下面这样
+                test: /\.html$/,
+                use: "html?attrs=img:src img:data-src"
+                    //loader: "raw"
+            },
+            {
+                test: /\.ejs$/,
+                use: "ejs-loader"
+            },
+            {
+                //文件加载器，处理文件静态资源
+                test: /iconfont\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: "file-loader?name=./fonts/[name].[ext]"
+            },
+            {
+                //图片加载器，雷同file-loader，更适合图片，可以将较小的图片转成base64，减少http请求
+                //如下配置，将小于8192byte的图片转成base64码
+                test: /\.(png|jpg|gif|svg)$/,
+                use: settings.urlLoader
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: "babel-loader"
+            },
+            {
+                test: /\.md$/,
+                use: ["ejs-loader", "markdown-loader"]
             }
-          },
-
-          "css-loader"
         ]
-        //配置css的抽取器、加载器。'-loader'可以省去
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // you can specify a publicPath here
-              // by default it use publicPath in webpackOptions.output
-              publicPath: "/"
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery"
+        }),
+        new webpack.DefinePlugin({
+            ENV: JSON.stringify(process.env.ENV)
+        }),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "css/[name][hash].css",
+            chunkFilename: "[id].css"
+        }),
+
+        // debug ? function() {} : new UglifyJsPlugin({
+        // 	compress: {
+        // 		warnings: false
+        // 	},
+        // 	except: ['$super','$','exports','require']
+        // })
+        new CopyWebpackPlugin([{ from: "./copy", to: "" }]),
+        // new ManifestPlugin({
+        //   fileName: 'manifest.json',
+        //   basePath: settings.publicPath,
+        //   seed: {
+        //     name: 'Manifest'
+        //   }
+        // }),
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    optimization: {
+        splitChunks: {
+            chunks: "async", //显示块的范围 三个可选值initial(初始块)，async(按需加载块)，all(全部块)，默认为all
+            minSize: 30000, //压缩前最小模块的大小，默认为30000
+            maxSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 5, //最大的按需（异步）加载次数（默认为5）
+            maxInitialRequests: 3, //最大初始化加载次数（默认为3）
+            automaticNameDelimiter: "~",
+            name: true,
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                }
             }
-          },
-
-          "css-loader",
-          "less-loader"
-        ]
-        //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
-      },
-      {
-        //html模板加载器，可以处理引用的静态资源，默认配置参数attrs=img:src，处理图片的src引用的资源
-        //比如你配置，attrs=img:src img:data-src就可以一并处理data-src引用的资源了，就像下面这样
-        test: /\.html$/,
-        use: "html?attrs=img:src img:data-src"
-        //loader: "raw"
-      },
-      {
-        test: /\.ejs$/,
-        use: "ejs-loader"
-      },
-      {
-        //文件加载器，处理文件静态资源
-        test: /iconfont\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: "file-loader?name=./fonts/[name].[ext]"
-      },
-      {
-        //图片加载器，雷同file-loader，更适合图片，可以将较小的图片转成base64，减少http请求
-        //如下配置，将小于8192byte的图片转成base64码
-        test: /\.(png|jpg|gif|svg)$/,
-        use: settings.urlLoader
-      },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: "babel-loader"
-      },
-      {
-        test: /\.md$/,
-        use: ["ejs-loader", "markdown-loader"]
-      }
-    ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery"
-    }),
-    new webpack.DefinePlugin({
-      ENV: JSON.stringify(process.env.ENV)
-    }),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "css/[name][hash].css",
-      chunkFilename: "[id].css"
-    }),
-
-    // debug ? function() {} : new UglifyJsPlugin({
-    // 	compress: {
-    // 		warnings: false
-    // 	},
-    // 	except: ['$super','$','exports','require']
-    // })
-    new CopyWebpackPlugin([{ from: "./copy", to: "" }]),
-    // new ManifestPlugin({
-    //   fileName: 'manifest.json',
-    //   basePath: settings.publicPath,
-    //   seed: {
-    //     name: 'Manifest'
-    //   }
-    // }),
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  optimization: {
-    splitChunks: {
-      chunks: "async",  //显示块的范围 三个可选值initial(初始块)，async(按需加载块)，all(全部块)，默认为all
-      minSize: 30000,  //压缩前最小模块的大小，默认为30000
-      maxSize: 0,
-      minChunks: 1,
-      maxAsyncRequests: 5,  //最大的按需（异步）加载次数（默认为5）
-      maxInitialRequests: 3, //最大初始化加载次数（默认为3）
-      automaticNameDelimiter: "~",
-      name: true,
-      cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
         }
-      }
+    },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        host: localhost,
+        port: 9090,
+        hot: true,
+        open: true
     }
-  },
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    // host:localhost,
-    port: 9090,
-    hot: true,
-    open: true
-  }
 };
 
 var pages = Object.keys(getEntry("src/view/pages/**/**.js", "src/view/pages/"));
 
 pages.forEach(function(pathname) {
-  var conf = {
-    alwaysWriteToDisk: true,
-    filename: "../dist/" + pathname + ".html",
-    template: "src/view/pages/" + pathname + ".js",
-    inject: true,
-    minify: {
-      removeComments: true,
-      collapseWhitespace: true
+    var conf = {
+        alwaysWriteToDisk: true,
+        filename: "../dist/" + pathname + ".html",
+        template: "src/view/pages/" + pathname + ".js",
+        inject: true,
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true
+        }
+    };
+
+    if (pathname in config.entry) {
+        conf.favicon = path.resolve(__dirname, "src/img/favicon.ico");
+        // conf.inject = "body";
+        conf.chunks = ["vendors", pathname];
+        conf.hash = true;
     }
-  };
 
-  if (pathname in config.entry) {
-    conf.favicon = path.resolve(__dirname, "src/img/favicon.ico");
-    // conf.inject = "body";
-    conf.chunks = ["vendors", pathname];
-    conf.hash = true;
-  }
-
-  config.plugins.push(new HtmlWebpackPlugin(conf));
+    config.plugins.push(new HtmlWebpackPlugin(conf));
 });
 
 config.plugins.push(
-  new HtmlWebpackHarddiskPlugin({
-    outputPath: path.resolve(__dirname, "dist")
-  })
+    new HtmlWebpackHarddiskPlugin({
+        outputPath: path.resolve(__dirname, "dist")
+    })
 );
 if (debug) {
-  // config.plugins.push()
+    // config.plugins.push()
 }
 
 module.exports = config;
