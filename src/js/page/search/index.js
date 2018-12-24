@@ -9,11 +9,27 @@ require("../../../css/page/index.less");
 require("../../../css/page/search.less");
 require("../../../css/common/useful.less");
 require("../../../js/components/header.js");
+// require("../../components/jquery-confirm/jquery-confirm.js");
+// require("../../components/jquery-confirm/jquery-confirm.less");
+import axios from 'axios';
 $(document).ready(function() {
-    // 增加事件
-    //倒计时
-    // $('#getting-started').countdown('2018/08/20', function(event) {
-    // 	$(this).html('<p>'+event.strftime('%n')+'</p>  '+'<p>'+event.strftime('%H')+'</p>:'+'<p>'+event.strftime('%M')+'</p>:'+'<p>'+event.strftime('%S')+'</p>');
-    // });
 
+    // console.log(value);
+    // console.log(val);
+    $(".search-button").click(function() {
+        let val = $(".search-key").val();
+        // console.log(val);
+        // if (val == '') {
+        //     $.alert('Please enter your ETH addresses');
+        // }
+        axios.get('https://token.lambda.im/api/lambda/' + val)
+            .then(res => {
+                console.log(res);
+                let data = res.data.lambda;
+                $('.search-result-wrapper').html(`Your balance have ${data} LAMB`);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    });
 });
