@@ -18,11 +18,11 @@ var settings = {
 }
 
 if (process.env.ENV == 'production') {
-    console.log('production',debug)
-    // settings.publicPath = '/ru/';
+    console.log('production', debug)
+        // settings.publicPath = '/ru/';
     settings.publicPath = '/';
 } else {
-    console.log('dev',debug)
+    console.log('dev', debug)
 }
 
 function getEntry(globPath, pathDir) {
@@ -58,52 +58,49 @@ var config = {
     mode: process.env.ENV || 'development',
     target: 'web',
     output: {
-        
-        path: path.join(__dirname, 'dist'),//生成文件的根目录
-        publicPath: settings.publicPath,//针对浏览器的路径，开发环境和生产环境不一样
+
+        path: path.join(__dirname, 'dist'), //生成文件的根目录
+        publicPath: settings.publicPath, //针对浏览器的路径，开发环境和生产环境不一样
         filename: 'js/[name][hash].js',
         chunkFilename: 'js/[id][chunkhash].chunk.js'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            // you can specify a publicPath here
-                            // by default it use publicPath in webpackOptions.output
-                            publicPath: '../'
-                        }
-                    },
-                    
-                    'css-loader'
-                ]
-                //配置css的抽取器、加载器。'-loader'可以省去
+                use: [{
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                // you can specify a publicPath here
+                                // by default it use publicPath in webpackOptions.output
+                                publicPath: '../'
+                            }
+                        },
+
+                        'css-loader'
+                    ]
+                    //配置css的抽取器、加载器。'-loader'可以省去
 
             }, {
                 test: /\.less$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            // you can specify a publicPath here
-                            // by default it use publicPath in webpackOptions.output
-                        }
-                    },
-                    "css-loader",
-                    "less-loader"
-                                      
-                ]
-                //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
+                use: [{
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                // you can specify a publicPath here
+                                // by default it use publicPath in webpackOptions.output
+                            }
+                        },
+                        "css-loader",
+                        "less-loader"
+
+                    ]
+                    //根据从右到左的顺序依次调用less、css加载器，前一个的输出是后一个的输入
 
             }, {
                 //html模板加载器，可以处理引用的静态资源，默认配置参数attrs=img:src，处理图片的src引用的资源
                 //比如你配置，attrs=img:src img:data-src就可以一并处理data-src引用的资源了，就像下面这样
                 test: /\.html$/,
                 use: "html?attrs=img:src img:data-src"
-                //loader: "raw"
+                    //loader: "raw"
             }, {
                 test: /\.ejs$/,
                 use: 'ejs-loader'
@@ -124,7 +121,7 @@ var config = {
                 test: /\.md$/,
                 use: ['ejs-loader', 'markdown-loader'],
             }
-            
+
         ]
     },
     plugins: [
@@ -186,14 +183,15 @@ var config = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
+        host: '192.168.1.15',
         port: 9090,
         open: true
-      }
+    }
 };
 
 var pages = Object.keys(getEntry('src/view/pages/**/**.js', 'src/view/pages/'));
 
-pages.forEach(function (pathname) {
+pages.forEach(function(pathname) {
     var conf = {
         alwaysWriteToDisk: true,
         filename: '../dist/' + pathname + '.html',
@@ -218,12 +216,12 @@ pages.forEach(function (pathname) {
 config.plugins.push(new HtmlWebpackHarddiskPlugin({
     outputPath: path.resolve(__dirname, 'dist')
 }));
-if(debug==false){
+if (debug == false) {
     config.plugins.push(new ImageminPlugin({
         pngquant: {
             quality: '70-100'
         }
-    }),)
+    }), )
 }
 
 
